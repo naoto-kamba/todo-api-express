@@ -1,0 +1,23 @@
+{
+  "name": "todo-api-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayataka0nk/todo-api-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayataka0nk/todo-api-express/issues"
+  },
+  "homepage": "https://github.com/ayataka0nk/todo-api-express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

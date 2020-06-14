@@ -10,5 +10,6 @@ FROM node:12-buster-slim as prod
 COPY . /todo-api-express
 WORKDIR /todo-api-express
 RUN npm install --production
+RUN npm run build
 EXPOSE 3000
 CMD ["npm", "run", "start"]

@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "node src/index.js",
+    "dev": "node dist/index.js",
+    "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/ayataka0nk/todo-api-express#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/express": "^4.17.6",
+    "express": "^4.17.1",
+    "typescript": "^3.9.5"
   }
 }

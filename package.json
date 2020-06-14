@@ -21,7 +21,10 @@
   "homepage": "https://github.com/ayataka0nk/todo-api-express#readme",
   "dependencies": {
     "@types/express": "^4.17.6",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
     "express": "^4.17.1",
+    "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   },

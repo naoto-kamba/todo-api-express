@@ -1,4 +1,4 @@
-FROM node:12.18-alpine as dev
+FROM node:14-alpine as dev
 RUN apk update && \
     apk add git
 EXPOSE 3000

@@ -1,6 +1,6 @@
 FROM node:12-buster-slim as dev
 RUN apt-get update && apt-get install -y \
-    git \
+    git locales \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 RUN echo "source /usr/share/bash-completion/completions/git" >> ~/.bashrc

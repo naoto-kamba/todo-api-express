@@ -8,10 +8,10 @@ const main = async () => {
 
   const app = express()
   const port = 3000
-  app.get('/', (req: Request, res: Response) =>
+  app.get('/api', (req: Request, res: Response) =>
     res.json({ greeting: 'Hello World!' })
   )
-  app.get('/connect-test', async (req: Request, res: Response) => {
+  app.get('/api/connect-test', async (req: Request, res: Response) => {
     const manager = getManager()
     const tasks = await manager.findOne(Task)
     return res.json(tasks)

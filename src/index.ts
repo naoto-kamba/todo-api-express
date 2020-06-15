@@ -13,7 +13,7 @@ const main = async () => {
   )
   app.get('/connect-test', async (req: Request, res: Response) => {
     const manager = getManager()
-    const tasks = await manager.find(Task)
+    const tasks = await manager.findOne(Task)
     return res.json(tasks)
   })
 

@@ -1,4 +1,4 @@
-import CustomNamingStrategy from './CustomNamingStrategy'
+const CustomNamingStrategy = require('./dist/CustomNamingStrategy').default
 
 module.exports = {
   type: 'mysql',
@@ -8,13 +8,13 @@ module.exports = {
   password: process.env.ORMCONFIG_PASSWORD,
   database: 'todoapp',
   synchronize: true,
-  entities: ['src/entity/*.ts'],
-  subscribers: ['src/subscriber/*.ts'],
-  migrations: ['src/migration/*.ts'],
+  entities: ['dist/entity/*.ts'],
+  subscribers: ['dist/subscriber/*.ts'],
+  migrations: ['dist/migration/*.ts'],
   cli: {
-    entitiesDir: 'src/entity',
-    migrationsDir: 'src/migration',
-    subscribersDir: 'src/subscriber',
+    entitiesDir: 'dist/entity',
+    migrationsDir: 'dist/migration',
+    subscribersDir: 'dist/subscriber',
   },
   namingStrategy: new CustomNamingStrategy(),
 }

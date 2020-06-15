@@ -1,3 +1,5 @@
+import CustomNamingStrategy from './CustomNamingStrategy'
+
 module.exports = {
   type: 'mysql',
   host: process.env.ORMCONFIG_HOST,
@@ -14,4 +16,5 @@ module.exports = {
     migrationsDir: 'src/migration',
     subscribersDir: 'src/subscriber',
   },
+  namingStrategy: new CustomNamingStrategy(),
 }

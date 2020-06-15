@@ -7,7 +7,7 @@ const main = async () => {
   await createConnection()
 
   const app = express()
-  const port = process.env.PORT
+  const port = 3000
   app.get('/api', (req: Request, res: Response) =>
     res.json({ greeting: 'Hello World!' })
   )

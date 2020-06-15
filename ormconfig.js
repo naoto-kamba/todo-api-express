@@ -8,9 +8,9 @@ module.exports = {
   password: process.env.ORMCONFIG_PASSWORD,
   database: 'todoapp',
   synchronize: true,
-  entities: ['dist/entity/*.ts'],
-  subscribers: ['dist/subscriber/*.ts'],
-  migrations: ['dist/migration/*.ts'],
+  entities: ['dist/entity/*.js'],
+  subscribers: ['dist/subscriber/*.js'],
+  migrations: ['dist/migration/*.js'],
   cli: {
     entitiesDir: 'dist/entity',
     migrationsDir: 'dist/migration',

@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm'
 
-@Entity()
+@Entity({ synchronize: false })
 export class Task extends BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number

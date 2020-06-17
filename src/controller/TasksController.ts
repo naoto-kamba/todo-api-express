@@ -29,7 +29,7 @@ const store = async (req: Request, res: Response): Promise<void> => {
 const update = async (req: Request, res: Response): Promise<void> => {
   const id = Number(req.params.id)
   const text: string | undefined = req.body.text
-  const isFinished: boolean | undefined = req.body.isFinished
+  const isFinished: boolean | undefined = Boolean(req.body.isFinished)
 
   const task = await Task.findOne(id)
   if (typeof task === 'undefined') {

@@ -37,7 +37,7 @@ const update = async (req: Request, res: Response): Promise<void> => {
   } else {
     if (typeof text !== 'undefined') task.text = text
     if (typeof isFinished !== 'undefined') task.isFinished = isFinished
-    task.save()
+    await task.save()
     res.sendStatus(204)
   }
 }

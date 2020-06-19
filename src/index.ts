@@ -1,21 +1,22 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
 import 'reflect-metadata'
-import { createConnection, getManager } from 'typeorm'
-import { Task } from './entity/Task'
+import { createConnection } from 'typeorm'
+import cors, { CorsOptions } from 'cors'
+
+import { route } from './route'
 
 const main = async () => {
   await createConnection()
 
   const app = express()
   const port = 80
-  app.get('/api', (req: Request, res: Response) =>
-    res.json({ greeting: 'Hello World!' })
-  )
-  app.get('/api/connect-test', async (req: Request, res: Response) => {
-    const manager = getManager()
-    const tasks = await manager.findOne(Task)
-    return res.json(tasks)
-  })
+  const corsOptions: CorsOptions = {
+    origin: ['http://127.0.0.1:8080', 'http://118.27.0.46:8090'],
+  }
+  app.use(cors(corsOptions))
+  app.use(express.json())
+  app.use(express.urlencoded({ extended: true }))
+  route(app)
 
   app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 }

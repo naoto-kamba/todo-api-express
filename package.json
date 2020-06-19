@@ -4,10 +4,9 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "ts-node ./src/index.ts",
+    "dev": "tsc -w & nodemon start ./dist/index.js",
     "build": "tsc",
     "start": "node ./dist/index.js",
-    "ts-node": "ts-node",
     "test": "echo \"Error: no test specified\" && exit 1",
     "typeorm": "ts-node ./node_modules/.bin/typeorm",
     "migrate": "ts-node ./node_modules/.bin/typeorm migration:run"
@@ -23,9 +22,11 @@
   },
   "homepage": "https://github.com/ayataka0nk/todo-api-express#readme",
   "dependencies": {
+    "@types/cors": "^2.8.6",
     "@types/express": "^4.17.6",
     "@types/mysql": "^2.15.13",
     "@types/pluralize": "0.0.29",
+    "cors": "^2.8.5",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "express": "^4.17.1",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.2.0",
     "@typescript-eslint/parser": "^3.2.0",
-    "eslint": "^7.2.0"
+    "eslint": "^7.2.0",
+    "nodemon": "^2.0.4"
   }
 }

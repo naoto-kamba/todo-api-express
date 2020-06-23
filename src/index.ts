@@ -14,6 +14,10 @@ const main = async () => {
     origin: ['http://127.0.0.1:8080', 'http://118.27.0.46:8080'],
   }
   app.use(cors(corsOptions))
+  app.use(function (req, res, next) {
+    res.setHeader('Cache-Control', 'no-cache')
+    next()
+  })
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
   route(app)

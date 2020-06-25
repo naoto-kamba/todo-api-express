@@ -11,7 +11,11 @@ const main = async () => {
   const app = express()
   const port = 80
   const corsOptions: CorsOptions = {
-    origin: ['http://127.0.0.1:8080', 'http://118.27.0.46:8080'],
+    origin: [
+      'http://127.0.0.1:8080',
+      'http://118.27.0.46:8080',
+      'http://www.ayataka0nk.work',
+    ],
   }
   app.use(cors(corsOptions))
   app.use(function (req, res, next) {

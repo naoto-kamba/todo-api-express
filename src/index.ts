@@ -14,7 +14,7 @@ const main = async () => {
     origin: [
       'http://127.0.0.1:8080',
       'http://118.27.0.46:8080',
-      'http://www.ayataka0nk.work',
+      'http://www.ayataka0nk.work:8080',
     ],
   }
   app.use(cors(corsOptions))
